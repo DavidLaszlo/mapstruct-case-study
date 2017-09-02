@@ -1,4 +1,4 @@
-package com.github.davidl.mappers;
+package com.github.davidl.mappers.basic;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -8,10 +8,10 @@ import com.github.davidl.dto.CarDto;
 import com.github.davidl.entity.Car;
 
 @Mapper
-public interface CarMapper {
+public abstract class AbstractCarMapper {
 
 	@Mappings({ @Mapping(source = "make", target = "manufacturer"),
 			@Mapping(source = "numberOfSeats", target = "seatCount") })
-	public CarDto carToCarDto(Car car);
+	public abstract CarDto carToCarDto(Car car);
 
 }

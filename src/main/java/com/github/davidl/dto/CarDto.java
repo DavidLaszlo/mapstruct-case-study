@@ -1,11 +1,16 @@
 package com.github.davidl.dto;
 
+import java.util.List;
+
 public class CarDto {
 
 	private String manufacturer;
 	private Integer seatCount;
 	private int productionYear;
-	private int previousOwners;
+	private int previousOwnerCount;
+	private List<String> previousOwners;
+	private List<CarDto> ownersPreviousCars;
+	private String name;
 
 	public String getManufacturer() {
 		return manufacturer;
@@ -31,12 +36,36 @@ public class CarDto {
 		this.productionYear = productionYear;
 	}
 
-	public int getPreviousOwners() {
+	public int getPreviousOwnerCount() {
+		return previousOwnerCount;
+	}
+
+	public void setPreviousOwnerCount(final int previousOwnerCount) {
+		this.previousOwnerCount = previousOwnerCount;
+	}
+
+	public List<String> getPreviousOwners() {
 		return previousOwners;
 	}
 
-	public void setPreviousOwners(final int previousOwners) {
+	public void setPreviousOwners(final List<String> previousOwners) {
 		this.previousOwners = previousOwners;
+	}
+
+	public List<CarDto> getOwnersPreviousCars() {
+		return ownersPreviousCars;
+	}
+
+	public void setOwnersPreviousCars(final List<CarDto> ownersPreviousCars) {
+		this.ownersPreviousCars = ownersPreviousCars;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(final String name) {
+		this.name = name;
 	}
 
 }
