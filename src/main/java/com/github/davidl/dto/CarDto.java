@@ -1,10 +1,10 @@
-package first;
-
+package com.github.davidl.dto;
 
 public class CarDto {
 
-	String manufacturer;
-	Integer seatCount;
+	private String manufacturer;
+	private Integer seatCount;
+	private int productionYear;
 
 	public String getManufacturer() {
 		return manufacturer;
@@ -20,6 +20,14 @@ public class CarDto {
 
 	public void setSeatCount(final Integer seatCount) {
 		this.seatCount = seatCount;
+	}
+
+	public int getProductionYear() {
+		return productionYear;
+	}
+
+	public void setProductionYear(final int productionYear) {
+		this.productionYear = productionYear;
 	}
 
 }
