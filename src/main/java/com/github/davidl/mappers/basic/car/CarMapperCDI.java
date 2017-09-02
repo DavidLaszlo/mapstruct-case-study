@@ -5,7 +5,9 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
 import com.github.davidl.dto.CarDto;
+import com.github.davidl.dto.PersonDTO;
 import com.github.davidl.entity.Car;
+import com.github.davidl.entity.Person;
 
 // The generated mapper implementation will be marked with the @ApplicationScoped annotation
 // and thus can be injected into fields, constructor arguments etc. using the @Inject annotation:
@@ -19,5 +21,9 @@ public interface CarMapperCDI {
 			@Mapping(source = "make", target = "manufacturer"),
 			@Mapping(source = "numberOfSeats", target = "seatCount") })
 	public CarDto carToCarDto(Car car);
+
+	// carToCarDto method requires a method to be able to map the Car.driver object to CarDTO.driver
+	// see reason at http://mapstruct.org/documentation/stable/reference/html/#mapping-object-references
+	public PersonDTO personToPersonDTO(Person person);
 
 }

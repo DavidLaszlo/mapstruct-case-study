@@ -7,8 +7,9 @@ import org.mapstruct.factory.Mappers;
 
 import com.github.davidl.dto.CarDto;
 import com.github.davidl.entity.Car;
+import com.github.davidl.mappers.basic.person.PersonMapper;
 
-@Mapper
+@Mapper(uses = PersonMapper.class)
 public interface CarMapper {
 
 	// it is good practice to have only one instance
@@ -23,4 +24,6 @@ public interface CarMapper {
 			@Mapping(source = "numberOfSeats", target = "seatCount") })
 	public CarDto carToCarDto(Car car);
 
+	// here we do not need the person Mapper method like in the CarMapper class, because we use the
+	// uses=PersonMapper.class property
 }

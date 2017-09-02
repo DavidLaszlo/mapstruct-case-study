@@ -11,6 +11,7 @@ public class Car {
 	private List<String> previousOwners;
 	private List<Car> ownersPreviousCars;
 	private String name;
+	private Person driver;
 
 	public String getMake() {
 		return make;
@@ -66,6 +67,14 @@ public class Car {
 
 	public void setName(final String name) {
 		this.name = name;
+	}
+
+	public Person getDriver() {
+		return driver;
+	}
+
+	public void setDriver(final Person driver) {
+		this.driver = driver;
 	}
 
 }

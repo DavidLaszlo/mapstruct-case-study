@@ -11,6 +11,7 @@ public class CarDto {
 	private List<String> previousOwners;
 	private List<CarDto> ownersPreviousCars;
 	private String name;
+	private PersonDTO driver;
 
 	public String getManufacturer() {
 		return manufacturer;
@@ -66,6 +67,14 @@ public class CarDto {
 
 	public void setName(final String name) {
 		this.name = name;
+	}
+
+	public PersonDTO getDriver() {
+		return driver;
+	}
+
+	public void setDriver(final PersonDTO driver) {
+		this.driver = driver;
 	}
 
 }
