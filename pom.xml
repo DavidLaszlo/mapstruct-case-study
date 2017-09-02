@@ -18,6 +18,15 @@
 			<artifactId>mapstruct-jdk8</artifactId>
 			<version>${org.mapstruct.version}</version>
 		</dependency>
+		<!-- this part is used just so @Inject will not result in compile time 
+			error for CDI always use what best fits your needs, and set it up correctly -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
