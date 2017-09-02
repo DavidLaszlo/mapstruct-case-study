@@ -2,9 +2,10 @@ package com.github.davidl.entity;
 
 public class Car {
 
-	String make;
-	Integer numberOfSeats;
-	int productionYear;
+	private String make;
+	private Integer numberOfSeats;
+	private int productionYear;
+	private Integer previousOwners;
 
 	public String getMake() {
 		return make;
@@ -28,6 +29,14 @@ public class Car {
 
 	public void setProductionYear(final int productionYear) {
 		this.productionYear = productionYear;
+	}
+
+	public Integer getPreviousOwners() {
+		return previousOwners;
+	}
+
+	public void setPreviousOwners(final Integer previousOwners) {
+		this.previousOwners = previousOwners;
 	}
 
 }

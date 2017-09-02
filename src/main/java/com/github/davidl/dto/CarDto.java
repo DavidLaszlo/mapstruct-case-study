@@ -5,6 +5,7 @@ public class CarDto {
 	private String manufacturer;
 	private Integer seatCount;
 	private int productionYear;
+	private int previousOwners;
 
 	public String getManufacturer() {
 		return manufacturer;
@@ -28,6 +29,14 @@ public class CarDto {
 
 	public void setProductionYear(final int productionYear) {
 		this.productionYear = productionYear;
+	}
+
+	public int getPreviousOwners() {
+		return previousOwners;
+	}
+
+	public void setPreviousOwners(final int previousOwners) {
+		this.previousOwners = previousOwners;
 	}
 
 }
