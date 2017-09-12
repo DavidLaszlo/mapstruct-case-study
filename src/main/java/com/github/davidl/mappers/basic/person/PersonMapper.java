@@ -10,4 +10,6 @@ public interface PersonMapper {
 
 	public abstract PersonDTO personToPersonDTO(Person person);
 
+	public abstract Person personDTOToPerson(PersonDTO person);
+
 }
